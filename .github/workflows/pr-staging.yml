@@ -19,6 +19,18 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    # Run PMD scan
+    - name: 'Run PMD scan'
+      uses: pmd/pmd-github-action@v1.1.0
+      id: pmd
+      with:
+        sourcePath: 'force-app'
+        rulesets: 'ruleset.xml'
+
+            # Check for PMD violations
+    - name: 'Check for PMD violations'
+      if: steps.pmd.outputs.violations != 0
+      run: exit 1
 
     # Runs a single command using the runners shell
     - name: 'Build and Deploy'

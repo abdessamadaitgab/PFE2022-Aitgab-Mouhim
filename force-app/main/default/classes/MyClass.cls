@@ -9,6 +9,9 @@ public with sharing class MyClass {
         public static integer somme(integer a , integer b){
             return a+b;
         }
+        public static integer soustraction(integer a , integer b){
+            return a-b;
+        }
 
     
 }

@@ -6,10 +6,9 @@
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public with sharing class MyClass {
-    public MyClass() {
         public static integer Somme(integer a , intrger b){
             return a+b;
         }
 
-    }
+    
 }

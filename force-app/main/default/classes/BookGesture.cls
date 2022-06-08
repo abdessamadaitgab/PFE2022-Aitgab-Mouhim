@@ -15,6 +15,16 @@ public without sharing class BookGesture {
         if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
             update(result);
         }
+    }
+        public static void applyAddition(Book__c[] books) {
+        List<Book__c> result = new List<Book__c>();
+        for (Book__c b :books){
+            b.Price__c *= 1.1;
+            result.add(b);
+        }
+        if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
+            update(result);
+        }
         
     
 }

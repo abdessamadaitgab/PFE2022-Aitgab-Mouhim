@@ -22,7 +22,7 @@ public class BookGestureTest {
         insert b;
         List<Book__c> result = new List<Book__c>();
         result.add(b);
-        BookGesture.applyAddition(result);
+        BookGesture.applyAddition2(result);
         // Retrieve the new book
         b = [SELECT Price__c FROM Book__c WHERE Id =:b.Id];
         System.debug('Price after applying Addition : ' + b.Price__c);

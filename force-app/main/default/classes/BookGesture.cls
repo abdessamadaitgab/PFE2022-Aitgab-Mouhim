@@ -1,9 +1,9 @@
 /**
- * @description       : 
- * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             : 
- * @last modified on  : 06-07-2022
- * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+* @description       : 
+* @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+* @group             : 
+* @last modified on  : 06-07-2022
+* @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public without sharing class BookGesture {
     public static void applyDiscount(Book__c[] books) {
@@ -16,7 +16,7 @@ public without sharing class BookGesture {
             update(result);
         }
     }
-        public static void applyAddition(Book__c[] books) {
+    public static void applyAddition2(Book__c[] books) {
         List<Book__c> result = new List<Book__c>();
         for (Book__c b :books){
             b.Price__c *= 1.1;
@@ -26,8 +26,10 @@ public without sharing class BookGesture {
             update(result);
         }
         
-    
-}
+        
+        
+        
+    }
     
     
 }

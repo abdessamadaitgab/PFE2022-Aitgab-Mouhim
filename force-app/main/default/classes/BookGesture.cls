@@ -2,10 +2,11 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 06-08-2022
+* @last modified on  : 06-09-2022
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public without sharing class BookGesture {
+    // aplying discount
     public static void applyDiscount(Book__c[] books) {
         List<Book__c> result = new List<Book__c>();
         for (Book__c bk :books){

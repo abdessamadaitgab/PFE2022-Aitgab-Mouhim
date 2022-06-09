@@ -1,6 +1,14 @@
+/**
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 06-09-2022
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+**/
 @isTest
 public class BookGestureTest {
-    static testMethod void testApplyDiscount() {
+    @isTest
+    static  void testApplyDiscount() {
         Book__c b = new Book__c(Name='Behind the Cloud', Price__c=100);
         System.debug('Price before applying discount: ' + b.Price__c);
         // Insert book
@@ -14,8 +22,8 @@ public class BookGestureTest {
         System.assertEquals(90, b.Price__c);
 
     }
-    
-    static testMethod void testApplyAddition() {
+    @isTest
+    static  void testApplyAddition() {
         Book__c b = new Book__c(Name='Behind the Cloud', Price__c=100);
         System.debug('Price before applying Addition: ' + b.Price__c);
         // Insert book

@@ -18,6 +18,9 @@
         <layout>Book__c-Book Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Offer__c-Offer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Stock__c-Stock Layout</layout>
     </layoutAssignments>
     <tabVisibilities>
@@ -29,5 +32,5 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
-   
+    
 </Profile>

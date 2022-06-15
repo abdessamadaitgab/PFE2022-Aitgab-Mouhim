@@ -2,7 +2,7 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 06-14-2022
+* @last modified on  : 06-15-2022
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public without sharing class BookGesture {
@@ -12,11 +12,10 @@ public without sharing class BookGesture {
         for (Book__c bk :books){
             bk.Price__c *= 0.9;
             result.add(bk);
-            if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
-                update(bk);
-            }
         }
-       
+        if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
+            update(result);
+        }
     }
     public static void applyAddition2(Book__c[] books) {
         List<Book__c> result = new List<Book__c>();

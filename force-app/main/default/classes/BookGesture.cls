@@ -13,9 +13,10 @@ public without sharing class BookGesture {
             bk.Price__c *= 0.9;
             result.add(bk);
         }
-        if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
-            update(result);
-        }
+         if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
+                update(result);
+            }
+        
     }
     public static void applyAddition2(Book__c[] books) {
         List<Book__c> result = new List<Book__c>();

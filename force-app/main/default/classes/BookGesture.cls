@@ -2,19 +2,19 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 06-15-2022
+* @last modified on  : 06-22-2022
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public without sharing class BookGesture {
     // aplying discount
     public static void applyDiscount(Book__c[] books) {
-        List<Book__c> result = new List<Book__c>();
+        List<Book__c> res = new List<Book__c>();
         for (Book__c bk :books){
             bk.Price__c *= 0.9;
-            result.add(bk);
+            res.add(bk);
         }
          if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
-                update(result);
+                update(res);
             }
         
     }

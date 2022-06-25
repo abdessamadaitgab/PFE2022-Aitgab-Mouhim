@@ -2,7 +2,7 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 06-22-2022
+* @last modified on  : 06-25-2022
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 public without sharing class BookGesture {
@@ -15,6 +15,7 @@ public without sharing class BookGesture {
         }
         if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
                 update(result);
+                
             }
         
     }

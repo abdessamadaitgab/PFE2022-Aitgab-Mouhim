@@ -8,14 +8,20 @@
 public without sharing class BookGesture {
     // aplying discount
     public static void applyDiscount(Book__c[] books) {
-        List<Book__c> result = new List<Book__c>();
+        List<Book__c> res = new List<Book__c>();
         for (Book__c bk :books){
             bk.Price__c *= 0.9;
             result.add(bk);
         }
         if (Schema.sObjectType.Book__c.fields.Price__c.isUpdateable()) {
                 update(result);
+<<<<<<< HEAD
                 
+=======
+            
+        }
+  
+>>>>>>> 7ef746fabca8d63fb0691ca624d10fea6c53ce03
             }
         
     }

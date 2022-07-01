@@ -31,6 +31,6 @@ else
   addError ='Existing';
   }
 //Check whether the error you are getting is similar to the one you added
-System.assertEquals('Existing', 'null');
+System.assertEquals('null', addError);
  }
 }
